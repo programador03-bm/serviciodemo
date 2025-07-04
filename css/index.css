@@ -54,9 +54,43 @@ header.scrolled {
   align-items: center;
 }
 
-.logo {
-  height: 50px;
+
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
 }
+.logo-contenedor a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nombre-empresa {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.nombre-empresa {
+  font-size: 18px;
+  color: #003366;
+  font-weight: bold;
+  line-height: 1.2;
+  text-decoration: none !important;
+  
+}
+
+.nombre-empresa small {
+  font-size: 14px;
+  color: #666;
+  font-weight: normal;
+  
+}
+
 
 /* Menú base */
 .logo-nav {
@@ -723,7 +757,7 @@ body.dark-mode #toggle-dark i {
     position: absolute;
     height: 3px;
     width: 100%;
-    background: rgb(3, 7, 255);
+    background: black;
     transition: 0.3s;
     left: 0;
   }
@@ -738,11 +772,13 @@ body.dark-mode #toggle-dark i {
 
   .menu-toggle::after {
     top: 20px;
+
   }
 
   .menu-toggle.active::before {
     transform: rotate(45deg);
     top: 13px;
+    background:white;
   }
 
   .menu-toggle.active span {
@@ -752,6 +788,7 @@ body.dark-mode #toggle-dark i {
   .menu-toggle.active::after {
     transform: rotate(-45deg);
     top: 13px;
+    background:white;
   }
 
   /* ✅ Menú deslizante */

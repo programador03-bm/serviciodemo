@@ -1,4 +1,9 @@
 /* VARIABLES Y MODO OSCURO */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 :root {
   --bg-color: #ffffff;
   --text-color: #111111;
@@ -373,6 +378,7 @@ body.dark-mode #toggle-dark i {
   .menu-toggle.active::before {
     transform: rotate(45deg);
     top: 13px;
+     background:white;
   }
 
   .menu-toggle.active span {
@@ -382,6 +388,7 @@ body.dark-mode #toggle-dark i {
   .menu-toggle.active::after {
     transform: rotate(-45deg);
     top: 13px;
+     background:white;
   }
 
   nav {
@@ -427,6 +434,8 @@ main {
 .seccion-redes {
   padding-top: 100px; /* por si el encabezado está encima */
 }
+
+
 /* --- ESTILOS TESTIMONIOS (CSS) COMPLETO --- */
 
 .seccion-testimonios {
@@ -441,14 +450,21 @@ main {
 }
 
 .contenedor-testimonios {
-    gap: 30px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
-  .testimonio {
-    flex-direction: column !important;
-    text-align: center;
-    gap: 20px;
-  }
+.testimonio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: aparecer 1s forwards;
+}
 
 .fila.izquierda {
   flex-direction: row;
@@ -512,5 +528,39 @@ main {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@media (max-width: 768px) {
+  .seccion-testimonios {
+    padding: 30px 15px;
+  }
+
+  .contenedor-testimonios {
+    gap: 60px;
+  }
+
+  .testimonio {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .testimonio img {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .texto {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .seccion-testimonios h2 {
+    font-size: 1.5em;
+  }
+
+  .texto blockquote {
+    font-size: 1em;
   }
 }

@@ -440,6 +440,7 @@ body.dark-mode #toggle-dark i {
   .menu-toggle.active::before {
     transform: rotate(45deg);
     top: 13px;
+     background:white;
   }
 
   .menu-toggle.active span {
@@ -449,6 +450,7 @@ body.dark-mode #toggle-dark i {
   .menu-toggle.active::after {
     transform: rotate(-45deg);
     top: 13px;
+     background:white;
   }
 
   nav {
